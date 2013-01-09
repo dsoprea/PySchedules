@@ -18,7 +18,10 @@ major improvements have been made:
   account screen on SD's website. This will not include encrypted channels 
   (channels that you may very well have access to, via a CableCard).
 
-$ pyschedules/tools/read.py <username> <password>
+Example tools (the first just connects, and presents the various major, 
+downloaded sections):
+
+$ PYTHONPATH=. pyschedules/tools/read.py <username> <password>
 MSG: Parsing version 1.3 data from 2013/01/09 to 2013/01/10
 > Reading section [station].
 > Reading section [channel mapping].
@@ -28,7 +31,7 @@ MSG: Parsing lineup Comcast West Palm Beach /Palm Beach Co.
 > Reading section [cast/crew member].
 > Reading section [genre].
 
-$ pyschedules/tools/qam.py FL09567
+$ PYTHONPATH=. pyschedules/tools/qam.py FL09567
 # Version 1.03 2012-01-26
 WBWPLD:561000000:QAM_256:231:73404:586
 WTVXDT2:561000000:QAM_256:230:60256:584

@@ -1,11 +1,18 @@
-Metadata-Version: 1.0
+Metadata-Version: 1.1
 Name: pyschedules
-Version: 0.1
+Version: 0.1.3
 Summary: Interface to Schedules Direct.
 Home-page: https://github.com/dsoprea/PySchedules
 Author: Dustin Oprea
 Author-email: myselfasunder@gmail.com
 License: LGPL
-Description: A library to pull channel, schedules, actors, and QAM maps (channels.conf) data.
+Description: A complete library to pull channels, schedules, actors, lineups, and QAM-maps (channels.conf) data from Schedules Direct.
 Keywords: dvb television tv cable schedules direct channel channels qam
 Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Programming Language :: Python
+Classifier: Topic :: Home Automation
+Classifier: Topic :: Multimedia :: Video :: Capture
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
