@@ -13,3 +13,6 @@ pyschedules.egg-info/zip-safe
 pyschedules/interfaces/__init__.py
 pyschedules/interfaces/ientity_trigger.py
 pyschedules/interfaces/iprogress_trigger.py
+pyschedules/tools/__init__.py
+pyschedules/tools/qam.py
+pyschedules/tools/read.py
