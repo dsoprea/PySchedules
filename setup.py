@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = '0.1.10'
+version = '0.1.15'
 
 setup(name='pyschedules',
       version=version,
@@ -20,7 +20,7 @@ A complete library to pull channels, schedules, actors, lineups, and QAM-maps (c
       author_email='myselfasunder@gmail.com',
       url='https://github.com/dsoprea/PySchedules',
       license='LGPL',
-      packages=['pyschedules/tools'] + find_packages(exclude=['ez_setup', 'examples', 'tests']),
+      packages=['pyschedules/examples'] + find_packages(exclude=['ez_setup', 'examples', 'tests']),
       include_package_data=True,
       zip_safe=True,
       install_requires=[
@@ -29,5 +29,8 @@ A complete library to pull channels, schedules, actors, lineups, and QAM-maps (c
       entry_points="""
       # -*- Entry points: -*-
       """,
-      )
+      scripts=[
+          'scripts/qam'
+      ]
+      ),
 
