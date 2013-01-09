@@ -1,14 +1,20 @@
 from setuptools import setup, find_packages
-import sys, os
 
-version = '0.1'
+version = '0.1.2'
 
 setup(name='pyschedules',
       version=version,
       description="Interface to Schedules Direct.",
       long_description="""\
-A library to pull channel, schedules, actors, and QAM maps (channels.conf) data.""",
-      classifiers=[], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
+A complete library to pull channels, schedules, actors, lineups, and QAM-maps (channels.conf) data from Schedules Direct.""",
+      classifiers=['Development Status :: 3 - Alpha', 
+                   'Intended Audience :: Developers',
+                   'License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)',
+                   'Programming Language :: Python',
+                   'Topic :: Home Automation',
+                   'Topic :: Multimedia :: Video :: Capture',
+                   'Topic :: Software Development :: Libraries :: Python Modules',
+                  ],
       keywords='dvb television tv cable schedules direct channel channels qam',
       author='Dustin Oprea',
       author_email='myselfasunder@gmail.com',

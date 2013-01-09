@@ -115,7 +115,7 @@ def get_qam_map(lineup_id):
     lineup_id = matched.group(0)
     url = ('https://www.schedulesdirect.org/qam/%s.qam.conf' % (lineup_id))
 
-    h = httplib2.Http(".cache")
+    h = httplib2.Http()
     resp, content = h.request(url, "GET")
 
     response_class = int(resp['status'][0])
