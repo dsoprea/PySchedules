@@ -27,7 +27,7 @@ if num_args >= 5:
 
 class EntityTrigger(IEntityTrigger):
     __v_station     = False
-    __v_lineup      = False
+    __v_lineup      = True
     __v_mapping     = False
     __v_schedule    = False
     __v_program     = False

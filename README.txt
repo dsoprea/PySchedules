@@ -25,6 +25,7 @@ $ python pyschedules/examples/read.py <username> <password>
 MSG: Parsing version 1.3 data from 2013/01/09 to 2013/01/10
 > Reading section [station].
 > Reading section [channel mapping].
+[Lineup: Comcast West Palm Beach /Palm Beach Co., West Palm Beach, Digital, CableDigital, 33436, FL09567:X]
 MSG: Parsing lineup Comcast West Palm Beach /Palm Beach Co.
 > Reading section [schedule].
 > Reading section [program].
