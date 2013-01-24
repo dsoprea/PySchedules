@@ -45,7 +45,7 @@ class XmlCallbacks(sax.ContentHandler, sax.ErrorHandler):
     def _parseDateTime(self, time):
         if time:
             try:
-                return DateTime.ISO.ParseDateTime(time)
+                return DateTime.ISO.ParseDateTime(time).timetuple()
             except Exception, e:
                 raise ValueError("Time '%s' is invalid: %s" % (time, e))
         else:
@@ -262,7 +262,7 @@ class XmlCallbacks(sax.ContentHandler, sax.ErrorHandler):
                     name = self._surname
 
                 self._importer.new_crew_member(self._programId, self._role,
-                                             name, self._givenname, 
+                                             name, self._givenname,
                                              self._surname)
 
     def _startGenresNode(self, name, attrs):
