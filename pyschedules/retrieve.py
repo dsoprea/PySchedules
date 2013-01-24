@@ -5,7 +5,7 @@ import re
 import httplib2
 
 from sys import exit
-from mx import DateTime
+from datetime import datetime, timedelta
 from xml import sax
 
 from pyschedules.xml_callbacks import XmlCallbacks
@@ -52,10 +52,10 @@ def get_file_object(username, password, utc_start=None, utc_stop=None):
     """Make the connection. Return a file-like object."""
 
     if not utc_start:
-        utc_start = DateTime.utc()
+        utc_start = datetime.now()
 
     if not utc_stop:
-        utc_stop = utc_start + 1 * DateTime.oneDay
+        utc_stop = utc_start + timedelta(1)
 
     logging.info("Downloading schedules for username [%s] in range [%s] to "
                  "[%s]." % (username, utc_start, utc_stop))
@@ -94,6 +94,8 @@ def process_file_object(file_obj, importer, progress):
     except:
         logging.exception("Parse failed.")
         raise
+
+    logging.info("Schedule data processed.")
 
 def parse_schedules(username, password, importer, progress, utc_start=None, 
                     utc_stop=None):

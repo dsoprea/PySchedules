@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = '0.1.17'
+version = '0.1.18'
 
 setup(name='pyschedules',
       version=version,
