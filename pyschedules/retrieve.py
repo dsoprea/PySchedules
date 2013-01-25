@@ -55,14 +55,14 @@ def get_file_object(username, password, utc_start=None, utc_stop=None):
         utc_start = datetime.now()
 
     if not utc_stop:
-        utc_stop = utc_start + timedelta(1)
+        utc_stop = utc_start + timedelta(days=1)
 
     logging.info("Downloading schedules for username [%s] in range [%s] to "
                  "[%s]." % (username, utc_start, utc_stop))
 
-    replacements = { 'start_time': utc_start.strftime('%Y-%m-%dT00:00:00Z'), 
-                     'stop_time':  utc_stop.strftime('%Y-%m-%dT00:00:00Z') }
-
+    replacements = {'start_time': utc_start.strftime('%Y-%m-%dT%H:%M:%SZ'), 
+                    'stop_time':  utc_stop.strftime('%Y-%m-%dT%H:%M:%SZ')}
+    
     soap_message_xml = (soap_message_xml_template % replacements)
 
     authinfo = urllib2.HTTPDigestAuthHandler()
