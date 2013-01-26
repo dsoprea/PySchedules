@@ -104,6 +104,19 @@ def parse_schedules(username, password, importer, progress, utc_start=None,
     file_obj = get_file_object(username, password, utc_start, utc_stop)
     process_file_object(file_obj, importer, progress)
 
+def write_raw_schedules(file_path, username, password, utc_start=None, \
+                        utc_stop=None, block_size=8192):
+    
+    file_obj = get_file_object(username, password, utc_start, utc_stop)
+
+    with file(file_path, 'w') as f:
+        while 1:
+            data = file_obj.read(block_size)
+            if data == '':
+                break
+            
+            f.write(data)
+
 def get_qam_map(lineup_id):
     
     # The service returns something like "FL09567:X", but its QAM-map service

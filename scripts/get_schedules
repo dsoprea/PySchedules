@@ -1,0 +1,35 @@
+#!/usr/bin/python
+
+from sys import argv, exit
+from datetime import datetime
+
+from pyschedules.retrieve import write_raw_schedules
+
+from logging import getLogger
+logging = getLogger(__name__)
+
+time_start = None
+time_stop = None
+
+if len(argv) < 4:
+    print("Please provide <file path> <username> <password>.")
+    exit()
+
+(file_path, username, password) = argv[1:4]
+
+if len(argv) >= 6:
+    time_start_phrase = argv[4]
+    time_stop_phrase = argv[5]
+
+    time_start = datetime.strptime(time_start_phrase, '%Y%m%d')
+    time_stop = datetime.strptime(time_start_phrase, '%Y%m%d')
+
+# TODO: Handle timezones, properly.
+
+try:
+    write_raw_schedules(file_path, username, password, time_start, time_stop)
+except Exception as e:
+    print("Could not write schedules: %s" % (e))
+else:
+    print("Schedules written.")
+
