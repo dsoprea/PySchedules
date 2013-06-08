@@ -28,7 +28,7 @@ url = 'http://webservices.schedulesdirect.tmsdatadirect.com/schedulesdirect/tvli
 realm = 'TMSWebServiceRealm'
 
 request_headers = { 'Accept-Encoding': 'gzip',
-                    'User-Agent':      'pyschedules' }
+                    'User-Agent':      'PySchedules/1.1' }
 
 class GzipStream:
     def __init__(self, fileobj):
