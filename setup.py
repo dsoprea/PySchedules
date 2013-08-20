@@ -1,13 +1,13 @@
 from setuptools import setup, find_packages
 
-version = '0.2.20'
+version = '0.2.21'
 
 setup(name='pyschedules',
       version=version,
       description="Interface to Schedules Direct.",
       long_description="""\
 A complete library to pull channels, schedules, actors, lineups, and QAM-maps (channels.conf) data from Schedules Direct.""",
-      classifiers=['Development Status :: 3 - Alpha', 
+      classifiers=['Development Status :: 5 - Production/Stable', 
                    'Intended Audience :: Developers',
                    'License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)',
                    'Programming Language :: Python',
