@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = '0.2.21'
+version = '0.2.22'
 
 setup(name='pyschedules',
       version=version,
@@ -9,7 +9,7 @@ setup(name='pyschedules',
 A complete library to pull channels, schedules, actors, lineups, and QAM-maps (channels.conf) data from Schedules Direct.""",
       classifiers=['Development Status :: 5 - Production/Stable', 
                    'Intended Audience :: Developers',
-                   'License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)',
+                   'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
                    'Programming Language :: Python',
                    'Topic :: Home Automation',
                    'Topic :: Multimedia :: Video :: Capture',
@@ -19,7 +19,7 @@ A complete library to pull channels, schedules, actors, lineups, and QAM-maps (c
       author='Dustin Oprea',
       author_email='myselfasunder@gmail.com',
       url='https://github.com/dsoprea/PySchedules',
-      license='LGPL',
+      license='GPL2',
       packages=['pyschedules/examples'] + find_packages(exclude=['ez_setup', 'examples', 'tests']),
       include_package_data=True,
       zip_safe=True,
